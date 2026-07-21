@@ -35,6 +35,8 @@ The project skeleton is prepared, and the first input loader is wired.
 - `outputs/source_bloggers_cleaned.json`
 - `outputs/source_bloggers_needs_review.json`
 - `outputs/source_bloggers_features.json`
+- `outputs/ideal_blogger_profile.json`
+- `outputs/top_candidate_matches.json`
 
 Проверить их содержимое лучше через Python, чтобы не столкнуться с проблемой кодировки в PowerShell:
 
@@ -53,4 +55,6 @@ The project skeleton is prepared, and the first input loader is wired.
 - читать исходную таблицу;
 - нормализовать ссылки и usernames;
 - сохранять очищенные данные;
-- собирать базовые признаки по usernames для первого черновика портрета базы.
+- собирать базовые признаки по usernames для первого черновика портрета базы;
+- сохранять простой агрегированный профиль базы блогеров;
+- подбирать топ кандидатов из тестового датасета по простому скорингу.

@@ -7,7 +7,12 @@ from src.load_bloggers import (
     save_bloggers_to_json,
     summarize_source_bloggers,
 )
-from src.profile_analyzer import build_blogger_features, summarize_blogger_features
+from src.matcher import load_candidate_bloggers, match_candidates
+from src.profile_analyzer import (
+    build_blogger_features,
+    build_ideal_blogger_profile,
+    summarize_blogger_features,
+)
 
 
 def run_pipeline() -> None:
@@ -19,14 +24,22 @@ def run_pipeline() -> None:
     problem_bloggers = get_problem_bloggers(bloggers)
     features = build_blogger_features(bloggers)
     feature_summary = summarize_blogger_features(features)
+    ideal_profile = build_ideal_blogger_profile(features)
+    candidate_file = project_root / "data" / "demo" / "candidate_bloggers.json"
+    candidates = load_candidate_bloggers(candidate_file)
+    top_matches = match_candidates(ideal_profile, candidates, top_n=5)
 
     cleaned_output = OUTPUTS_DIR / "source_bloggers_cleaned.json"
     problem_output = OUTPUTS_DIR / "source_bloggers_needs_review.json"
     features_output = OUTPUTS_DIR / "source_bloggers_features.json"
+    profile_output = OUTPUTS_DIR / "ideal_blogger_profile.json"
+    matches_output = OUTPUTS_DIR / "top_candidate_matches.json"
 
     save_bloggers_to_json(bloggers, cleaned_output)
     save_bloggers_to_json(problem_bloggers, problem_output)
     save_bloggers_to_json(features, features_output)
+    save_bloggers_to_json([ideal_profile], profile_output)
+    save_bloggers_to_json(top_matches, matches_output)
 
     print("Базовый каркас MVP готов.")
     print(f"Корень проекта: {project_root}")
@@ -36,12 +49,21 @@ def run_pipeline() -> None:
     print(f"Очищенные данные сохранены: {cleaned_output}")
     print(f"Проблемные строки сохранены: {problem_output}")
     print(f"Признаки блогеров сохранены: {features_output}")
+    print(f"Профиль базы сохранен: {profile_output}")
+    print(f"Топ кандидатов сохранен: {matches_output}")
     print("Краткая сводка по базе:")
     print(f"- Средняя длина username: {feature_summary['avg_username_length']}")
     print(f"- Username с цифрами: {feature_summary['with_digits']}")
     print(f"- Username с нижним подчеркиванием: {feature_summary['with_underscore']}")
     print(f"- Username с точкой: {feature_summary['with_dot']}")
     print(f"- Частые ключевые слова: {feature_summary['top_keywords']}")
+    print("Черновой портрет базы:")
+    for note in ideal_profile.notes:
+        print(f"- {note}")
+
+    print("Топ кандидатов для следующего шага:")
+    for item in top_matches:
+        print(f"- {item.username} ({item.platform}) — score {item.score}")
 
     if problem_bloggers:
         print("Строки, требующие проверки:")
