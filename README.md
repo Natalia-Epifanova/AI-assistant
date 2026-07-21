@@ -13,4 +13,11 @@ This repository contains a small MVP for the blogger search test task.
 
 ## Current status
 
-The project skeleton is prepared. The next step is wiring input loading and data normalization.
+The project skeleton is prepared, and the first input loader is wired.
+
+## What the loader does
+
+- reads the first sheet from `data/input/bloggers.xlsx`;
+- extracts Instagram links from raw spreadsheet values;
+- derives usernames from URLs or `@handle` mentions;
+- marks problematic rows as `needs_review`.
