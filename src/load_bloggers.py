@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import re
+from dataclasses import asdict
+import json
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -51,6 +53,11 @@ def extract_instagram_url(raw_value: str) -> str | None:
     if match:
         parsed = urlparse(match.group(0))
         return f"{parsed.scheme}://{parsed.netloc}/{match.group(1)}"
+
+    username = extract_username(raw_value)
+    if username:
+        return f"https://www.instagram.com/{username}"
+
     return None
 
 
@@ -74,3 +81,16 @@ def summarize_source_bloggers(bloggers: list[SourceBlogger]) -> dict[str, int]:
         "ok": sum(1 for item in bloggers if item.status == "ok"),
         "needs_review": sum(1 for item in bloggers if item.status == "needs_review"),
     }
+
+
+def get_problem_bloggers(bloggers: list[SourceBlogger]) -> list[SourceBlogger]:
+    """Возвращает строки, требующие ручной проверки."""
+    return [item for item in bloggers if item.status == "needs_review"]
+
+
+def save_bloggers_to_json(bloggers: list[SourceBlogger], output_path: Path) -> None:
+    """Сохраняет список блогеров в JSON-файл."""
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with output_path.open("w", encoding="utf-8") as file:
+        json.dump([asdict(item) for item in bloggers], file, ensure_ascii=False, indent=2)

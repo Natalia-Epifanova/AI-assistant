@@ -21,3 +21,36 @@ The project skeleton is prepared, and the first input loader is wired.
 - extracts Instagram links from raw spreadsheet values;
 - derives usernames from URLs or `@handle` mentions;
 - marks problematic rows as `needs_review`.
+
+## Как запустить
+
+```powershell
+& 'C:\Users\user\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' .\main.py
+```
+
+## Как проверить результат
+
+После запуска должны появиться файлы:
+
+- `outputs/source_bloggers_cleaned.json`
+- `outputs/source_bloggers_needs_review.json`
+- `outputs/source_bloggers_features.json`
+
+Проверить их содержимое лучше через Python, чтобы не столкнуться с проблемой кодировки в PowerShell:
+
+```powershell
+& 'C:\Users\user\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -c "from pathlib import Path; print(Path('outputs/source_bloggers_needs_review.json').read_text(encoding='utf-8'))"
+```
+
+Если все в порядке, ты увидишь проблемную строку в нормальном виде:
+
+`МИША И КЕЙТ (@mishandkatya) • Instagram photos and videos`
+
+## Что есть сейчас
+
+На текущем этапе MVP уже умеет:
+
+- читать исходную таблицу;
+- нормализовать ссылки и usernames;
+- сохранять очищенные данные;
+- собирать базовые признаки по usernames для первого черновика портрета базы.
