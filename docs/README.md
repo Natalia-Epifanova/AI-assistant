@@ -1,7 +1,7 @@
-# Documentation
+# Документация
 
-This folder will contain:
+В этой папке лежат материалы для финальной упаковки тестового задания:
 
-- assumptions for the MVP;
-- automation scheme;
-- notes for the final submission.
+- допущения MVP;
+- схема автоматизации;
+- заметки для итоговой сдачи.

@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1000,
+    "source_kind": "youtube_live",
+    "platform": "youtube_shorts",
+    "username": "outfits_check",
+    "url": "https://www.youtube.com/watch?v=_ugoxztLc5Q",
+    "bio": "Beautiful Street Fashion Outfits Style #shorts",
+    "topics": [
+      "fashion"
+    ],
+    "visual_tags": [
+      "soft",
+      "feminine",
+      "ugc"
+    ],
+    "tone": [
+      "friendly",
+      "native",
+      "warm"
+    ],
+    "audience_size": "unknown",
+    "engagement_level": "medium",
+    "why_fit": "Найден через YouTube по запросу 'fashion outfits women shorts', канал 'Outfits Check'."
+  },
+  {
+    "id": 1001,
+    "source_kind": "youtube_live",
+    "platform": "youtube_shorts",
+    "username": "pro_rush_wb",
+    "url": "https://www.youtube.com/watch?v=D8p-pLBaxyw",
+    "bio": "Праздничные образы💔 #wildberries #шортс #видео #style #мода #одежда #обзор #стиль #рекомендации",
+    "topics": [
+      "fashion",
+      "reviews",
+      "shopping"
+    ],
+    "visual_tags": [
+      "ugc"
+    ],
+    "tone": [
+      "native",
+      "practical"
+    ],
+    "audience_size": "unknown",
+    "engagement_level": "medium",
+    "why_fit": "Найден через YouTube по запросу 'wildberries clothing review shorts', канал 'Pro_Rush_WB'."
+  },
+  {
+    "id": 1002,
+    "source_kind": "youtube_live",
+    "platform": "youtube_shorts",
+    "username": "kataleya",
+    "url": "https://www.youtube.com/watch?v=fSWFy2Ow2vg",
+    "bio": "Beautiful street girl #fashion#summer#outfit#barbie#style#body#dress#nobra#shorts#topgirl",
+    "topics": [
+      "fashion"
+    ],
+    "visual_tags": [
+      "soft",
+      "feminine",
+      "ugc"
+    ],
+    "tone": [
+      "friendly",
+      "native",
+      "warm"
+    ],
+    "audience_size": "unknown",
+    "engagement_level": "medium",
+    "why_fit": "Найден через YouTube по запросу 'women style lookbook shorts', канал 'kataleya'."
+  },
+  {
+    "id": 1003,
+    "source_kind": "youtube_live",
+    "platform": "youtube_shorts",
+    "username": "click_cart_fashion",
+    "url": "https://www.youtube.com/watch?v=KOpgCFjHvdA",
+    "bio": "12 Smart Casual Outfit Ideas with Denim, Pants &amp; Layered Tops | Everyday Fashion Inspo ✨ #shorts",
+    "topics": [
+      "fashion",
+      "lifestyle"
+    ],
+    "visual_tags": [
+      "ugc"
+    ],
+    "tone": [
+      "native"
+    ],
+    "audience_size": "unknown",
+    "engagement_level": "medium",
+    "why_fit": "Найден через YouTube по запросу 'women style lookbook shorts', канал 'Click Cart Fashion'."
+  },
+  {
+    "id": 1004,
+    "source_kind": "youtube_live",
+    "platform": "youtube_shorts",
+    "username": "styled_by_her",
+    "url": "https://www.youtube.com/watch?v=DjG-MBYYxD4",
+    "bio": "Cute Jeans Outfit Ideas💖!! #shorts #viral #trending #ytshorts",
+    "topics": [
+      "fashion"
+    ],
+    "visual_tags": [
+      "soft",
+      "feminine",
+      "ugc"
+    ],
+    "tone": [
+      "native"
+    ],
+    "audience_size": "unknown",
+    "engagement_level": "medium",
+    "why_fit": "Найден через YouTube по запросу 'women style lookbook shorts', канал 'Styled By Her'."
+  }
+]

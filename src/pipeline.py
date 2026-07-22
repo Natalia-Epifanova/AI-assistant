@@ -19,9 +19,13 @@ from src.offer_generator import build_outreach_offers
 from src.profile_analyzer import (
     build_blogger_features,
     build_ideal_blogger_profile,
-    summarize_blogger_features,
 )
 from src.youtube_client import search_youtube_videos, youtube_items_to_json
+
+
+def format_output_path(path: Path, project_root: Path) -> str:
+    """Возвращает путь в коротком виде относительно корня проекта."""
+    return str(path.relative_to(project_root))
 
 
 def run_pipeline() -> None:
@@ -37,7 +41,6 @@ def run_pipeline() -> None:
     summary = summarize_source_bloggers(bloggers)
     problem_bloggers = get_problem_bloggers(bloggers)
     features = build_blogger_features(bloggers)
-    feature_summary = summarize_blogger_features(features)
     ideal_profile = build_ideal_blogger_profile(features)
 
     demo_candidates = load_candidate_bloggers(candidate_file)
@@ -80,52 +83,58 @@ def run_pipeline() -> None:
     save_bloggers_to_json(top_matches, matches_output)
     save_bloggers_to_json(offers, offers_output)
 
-    print("Базовый каркас MVP готов.")
-    print(f"Корень проекта: {project_root}")
-    print(f"Ключ YouTube найден: {'да' if youtube_api_key else 'нет'}")
-    print(f"Всего блогеров: {summary['total']}")
-    print(f"Готовы к анализу: {summary['ok']}")
-    print(f"Требуют проверки: {summary['needs_review']}")
-    print(f"Очищенные данные сохранены: {cleaned_output}")
-    print(f"Проблемные строки сохранены: {problem_output}")
-    print(f"Признаки блогеров сохранены: {features_output}")
-    print(f"Профиль базы сохранен: {profile_output}")
-    print(f"Топ кандидатов сохранен: {matches_output}")
-    print(f"Черновики офферов сохранены: {offers_output}")
-    print("Краткая сводка по базе:")
-    print(f"- Средняя длина username: {feature_summary['avg_username_length']}")
-    print(f"- Username с цифрами: {feature_summary['with_digits']}")
-    print(f"- Username с нижним подчеркиванием: {feature_summary['with_underscore']}")
-    print(f"- Username с точкой: {feature_summary['with_dot']}")
-    print(f"- Частые ключевые слова: {feature_summary['top_keywords']}")
-    print("Черновой портрет базы:")
-    for note in ideal_profile.notes:
-        print(f"- {note}")
+    profile_output_label = format_output_path(profile_output, project_root)
+    matches_output_label = format_output_path(matches_output, project_root)
+    offers_output_label = format_output_path(offers_output, project_root)
+    cleaned_output_label = format_output_path(cleaned_output, project_root)
+    problem_output_label = format_output_path(problem_output, project_root)
+    youtube_output_label = format_output_path(youtube_output, project_root)
+    youtube_candidates_output_label = format_output_path(youtube_candidates_output, project_root)
 
-    print("Источники кандидатов:")
-    print(f"- Демо-кандидатов: {len(demo_candidates)}")
-    print(f"- YouTube-кандидатов: {len(youtube_candidates)}")
-
-    print("Топ кандидатов для следующего шага:")
+    print("MVP-обработка завершена.")
+    print()
+    print("Краткий итог:")
+    print(f"- Обработано блогеров: {summary['total']}")
+    print(f"- Готовы к анализу: {summary['ok']}")
+    print(f"- Требуют ручной проверки: {summary['needs_review']}")
+    print(f"- Всего кандидатов найдено: {len(all_candidates)}")
+    print(f"- Из демо-датасета: {len(demo_candidates)}")
+    print(f"- Из YouTube: {len(youtube_candidates)}")
+    print(f"- Подготовлено офферов: {len(offers)}")
+    print()
+    print("Итоговые файлы:")
+    print(f"- Портрет целевого блогера: {profile_output_label}")
+    print(f"- Топ кандидатов: {matches_output_label}")
+    print(f"- Черновики офферов: {offers_output_label}")
+    print(f"- Очищенная база: {cleaned_output_label}")
+    if problem_bloggers:
+        print(f"- Строки для ручной проверки: {problem_output_label}")
+    print()
+    print("Топ кандидатов:")
     for item in top_matches:
-        print(f"- {item.username} ({item.platform}) - score {item.score}")
-
-    print("Подготовлены персональные офферы:")
+        print(f"- {item.username} ({item.platform}), score {item.score}")
+    print()
+    print("Примеры офферов:")
     for item in offers[:3]:
         print(f"- @{item.username}: {item.subject}")
 
     if youtube_items:
-        print(f"Результаты YouTube сохранены: {youtube_output}")
-        print(f"Кандидаты YouTube сохранены: {youtube_candidates_output}")
-        print(f"Найдено видео YouTube: {len(youtube_items)}")
-        for item in youtube_candidates[:3]:
-            print(f"- YouTube-кандидат: {item.username}")
+        print()
+        print("YouTube-поиск выполнен.")
+        print(f"- Найдено видео: {len(youtube_items)}")
+        print(f"- Сырые результаты: {youtube_output_label}")
+        print(f"- Преобразованные кандидаты: {youtube_candidates_output_label}")
     elif youtube_error:
-        print(f"Не удалось получить YouTube-результаты: {youtube_error}")
+        print()
+        print("YouTube-поиск не был использован в этом запуске.")
+        print(f"- Причина: {youtube_error}")
     else:
-        print("YouTube-поиск пропущен: ключ не найден в .env")
+        print()
+        print("YouTube-поиск не был использован в этом запуске.")
+        print("- Причина: ключ не найден в .env")
 
     if problem_bloggers:
+        print()
         print("Строки, требующие проверки:")
         for item in problem_bloggers:
             print(

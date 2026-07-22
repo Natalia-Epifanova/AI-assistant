@@ -1,0 +1,352 @@
+[
+  {
+    "row_number": 1,
+    "username": "merklary_l",
+    "url": "https://www.instagram.com/merklary_l",
+    "username_length": 10,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 3,
+    "username": "curly.bloger",
+    "url": "https://www.instagram.com/curly.bloger",
+    "username_length": 12,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": [
+      "blog"
+    ]
+  },
+  {
+    "row_number": 6,
+    "username": "krrazalia",
+    "url": "https://www.instagram.com/krrazalia",
+    "username_length": 9,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 9,
+    "username": "nev_pollyy",
+    "url": "https://www.instagram.com/nev_pollyy",
+    "username_length": 10,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 11,
+    "username": "_crazy__unicorn__",
+    "url": "https://www.instagram.com/_crazy__unicorn__",
+    "username_length": 17,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 12,
+    "username": "demoiselle._.rie",
+    "url": "https://www.instagram.com/demoiselle._.rie",
+    "username_length": 16,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 14,
+    "username": "shalafaeva.al",
+    "url": "https://www.instagram.com/shalafaeva.al",
+    "username_length": 13,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 15,
+    "username": "kristi_naxodka",
+    "url": "https://www.instagram.com/kristi_naxodka",
+    "username_length": 14,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 19,
+    "username": "yunglolaa",
+    "url": "https://www.instagram.com/yunglolaa",
+    "username_length": 9,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 22,
+    "username": "sha_obzor.wb",
+    "url": "https://www.instagram.com/sha_obzor.wb",
+    "username_length": 12,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": true,
+    "keyword_matches": [
+      "wb",
+      "obzor"
+    ]
+  },
+  {
+    "row_number": 26,
+    "username": "daria_grogulenko",
+    "url": "https://www.instagram.com/daria_grogulenko",
+    "username_length": 16,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 27,
+    "username": "llaurraiiam",
+    "url": "https://www.instagram.com/llaurraiiam",
+    "username_length": 11,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 28,
+    "username": "lv_yana_lv",
+    "url": "https://www.instagram.com/lv_yana_lv",
+    "username_length": 10,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 29,
+    "username": "mishandkatya",
+    "url": "https://www.instagram.com/mishandkatya",
+    "username_length": 12,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 32,
+    "username": "v.m.Beauty_blog",
+    "url": "https://instagram.com/v.m.Beauty_blog",
+    "username_length": 15,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": true,
+    "keyword_matches": [
+      "beauty",
+      "blog"
+    ]
+  },
+  {
+    "row_number": 36,
+    "username": "miysta_fatt_",
+    "url": "https://www.instagram.com/miysta_fatt_",
+    "username_length": 12,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 38,
+    "username": "juliar_r",
+    "url": "https://www.instagram.com/juliar_r",
+    "username_length": 8,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 42,
+    "username": "_kate_bruni",
+    "url": "https://www.instagram.com/_kate_bruni",
+    "username_length": 11,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 46,
+    "username": "jd_cosm",
+    "url": "https://www.instagram.com/jd_cosm",
+    "username_length": 7,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 49,
+    "username": "habakher",
+    "url": "https://www.instagram.com/habakher",
+    "username_length": 8,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 52,
+    "username": "dddinaaaaaa",
+    "url": "https://www.instagram.com/dddinaaaaaa",
+    "username_length": 11,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 53,
+    "username": "janestetsiura",
+    "url": "https://www.instagram.com/janestetsiura",
+    "username_length": 13,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 54,
+    "username": "ri_vls",
+    "url": "https://www.instagram.com/ri_vls",
+    "username_length": 6,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 55,
+    "username": "__aparina",
+    "url": "https://www.instagram.com/__aparina",
+    "username_length": 9,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 58,
+    "username": "armlilitka",
+    "url": "https://www.instagram.com/armlilitka",
+    "username_length": 10,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 59,
+    "username": "rtini.a13",
+    "url": "https://www.instagram.com/rtini.a13",
+    "username_length": 9,
+    "has_digits": true,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 60,
+    "username": "aida.mixx",
+    "url": "https://www.instagram.com/aida.mixx",
+    "username_length": 9,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 63,
+    "username": "bazhenova_alenaa",
+    "url": "https://www.instagram.com/bazhenova_alenaa",
+    "username_length": 16,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 65,
+    "username": "anetboss_",
+    "url": "https://www.instagram.com/anetboss_",
+    "username_length": 9,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 70,
+    "username": "19.voron",
+    "url": "https://www.instagram.com/19.voron",
+    "username_length": 8,
+    "has_digits": true,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 71,
+    "username": "ninooochka2.0",
+    "url": "https://www.instagram.com/ninooochka2.0",
+    "username_length": 13,
+    "has_digits": true,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 72,
+    "username": "irinatitovaaa_",
+    "url": "https://www.instagram.com/irinatitovaaa_",
+    "username_length": 14,
+    "has_digits": false,
+    "has_underscore": true,
+    "has_dot": false,
+    "keyword_matches": []
+  },
+  {
+    "row_number": 73,
+    "username": "kotova.live",
+    "url": "https://www.instagram.com/kotova.live",
+    "username_length": 11,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": [
+      "live"
+    ]
+  },
+  {
+    "row_number": 76,
+    "username": "zari.ishikhovaa",
+    "url": "https://instagram.com/zari.ishikhovaa",
+    "username_length": 15,
+    "has_digits": false,
+    "has_underscore": false,
+    "has_dot": true,
+    "keyword_matches": []
+  }
+]
