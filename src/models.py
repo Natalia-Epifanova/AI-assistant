@@ -46,6 +46,7 @@ class CandidateBlogger:
     """Кандидат для подбора похожих блогеров."""
 
     id: int
+    source_kind: str
     platform: str
     username: str
     url: str
@@ -63,6 +64,7 @@ class CandidateMatch:
     """Результат подбора кандидата."""
 
     id: int
+    source_kind: str
     username: str
     platform: str
     url: str
@@ -71,3 +73,28 @@ class CandidateMatch:
     matched_visual_tags: list[str]
     matched_tone: list[str]
     reasons: list[str]
+
+
+@dataclass(slots=True)
+class OutreachOffer:
+    """Персональный черновик оффера блогеру."""
+
+    username: str
+    platform: str
+    url: str
+    subject: str
+    message: str
+    personalization_points: list[str]
+
+
+@dataclass(slots=True)
+class YouTubeSearchItem:
+    """Результат поиска YouTube для MVP."""
+
+    query: str
+    video_id: str
+    title: str
+    channel_title: str
+    description: str
+    published_at: str
+    video_url: str

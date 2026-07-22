@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-import re
-from dataclasses import asdict
 import json
+import re
+from dataclasses import asdict, is_dataclass
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -88,9 +88,16 @@ def get_problem_bloggers(bloggers: list[SourceBlogger]) -> list[SourceBlogger]:
     return [item for item in bloggers if item.status == "needs_review"]
 
 
-def save_bloggers_to_json(bloggers: list[SourceBlogger], output_path: Path) -> None:
-    """Сохраняет список блогеров в JSON-файл."""
+def save_bloggers_to_json(bloggers: list[object], output_path: Path) -> None:
+    """Сохраняет список объектов в JSON-файл."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    serializable_items = []
+    for item in bloggers:
+        if is_dataclass(item):
+            serializable_items.append(asdict(item))
+        else:
+            serializable_items.append(item)
+
     with output_path.open("w", encoding="utf-8") as file:
-        json.dump([asdict(item) for item in bloggers], file, ensure_ascii=False, indent=2)
+        json.dump(serializable_items, file, ensure_ascii=False, indent=2)
