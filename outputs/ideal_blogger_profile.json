@@ -1,0 +1,40 @@
+[
+  {
+    "total_bloggers": 34,
+    "avg_username_length": 11.32,
+    "usernames_with_digits": 3,
+    "usernames_with_underscore": 18,
+    "usernames_with_dot": 11,
+    "top_keywords": [
+      [
+        "blog",
+        2
+      ],
+      [
+        "wb",
+        1
+      ],
+      [
+        "obzor",
+        1
+      ],
+      [
+        "beauty",
+        1
+      ],
+      [
+        "live",
+        1
+      ]
+    ],
+    "notes": [
+      "В базе часто встречаются usernames с нижним подчеркиванием.",
+      "Часть usernames оформлена через точки, что похоже на персональный стиль аккаунтов.",
+      "Большинство usernames выглядят персонально и не перегружены цифрами.",
+      "В usernames встречаются тематические маркеры: blog, wb, obzor, beauty, live.",
+      "Для MVP базовыми целевыми темами считаем fashion, lifestyle, reviews и shopping.",
+      "Для MVP базовыми визуальными тегами считаем light, clean, soft, feminine и ugc.",
+      "Для MVP базовым тоном считаем friendly, native, warm и practical."
+    ]
+  }
+]

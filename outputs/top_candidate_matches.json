@@ -1,0 +1,147 @@
+[
+  {
+    "id": 7,
+    "source_kind": "demo_dataset",
+    "username": "sofia.daily.fit",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/sofia.daily.fit",
+    "score": 26,
+    "matched_topics": [
+      "fashion",
+      "lifestyle",
+      "shopping"
+    ],
+    "matched_visual_tags": [
+      "soft",
+      "light",
+      "clean"
+    ],
+    "matched_tone": [
+      "friendly",
+      "native",
+      "warm"
+    ],
+    "reasons": [
+      "Совпадают темы: fashion, lifestyle, shopping.",
+      "Совпадают визуальные теги: soft, light, clean.",
+      "Совпадает тон: friendly, native, warm.",
+      "Платформа кандидата: instagram.",
+      "Похожа на персональный fashion-аккаунт с нативной подачей."
+    ]
+  },
+  {
+    "id": 5,
+    "source_kind": "demo_dataset",
+    "username": "polina.beauty.look",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/polina.beauty.look",
+    "score": 24,
+    "matched_topics": [
+      "fashion",
+      "reviews",
+      "lifestyle"
+    ],
+    "matched_visual_tags": [
+      "soft",
+      "clean",
+      "ugc"
+    ],
+    "matched_tone": [
+      "friendly",
+      "warm"
+    ],
+    "reasons": [
+      "Совпадают темы: fashion, reviews, lifestyle.",
+      "Совпадают визуальные теги: soft, clean, ugc.",
+      "Совпадает тон: friendly, warm.",
+      "Платформа кандидата: instagram.",
+      "Сочетает beauty и fashion, что встречается у части исходной базы."
+    ]
+  },
+  {
+    "id": 12,
+    "source_kind": "demo_dataset",
+    "username": "karina.review.room",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/karina.review.room",
+    "score": 24,
+    "matched_topics": [
+      "reviews",
+      "fashion",
+      "shopping"
+    ],
+    "matched_visual_tags": [
+      "ugc",
+      "soft",
+      "clean"
+    ],
+    "matched_tone": [
+      "practical",
+      "friendly"
+    ],
+    "reasons": [
+      "Совпадают темы: reviews, fashion, shopping.",
+      "Совпадают визуальные теги: ugc, soft, clean.",
+      "Совпадает тон: practical, friendly.",
+      "Платформа кандидата: instagram.",
+      "Есть явное совпадение по обзорам, примеркам и спокойной подаче."
+    ]
+  },
+  {
+    "id": 1,
+    "source_kind": "demo_dataset",
+    "username": "anna.style.daily",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/anna.style.daily",
+    "score": 23,
+    "matched_topics": [
+      "fashion",
+      "lifestyle",
+      "shopping"
+    ],
+    "matched_visual_tags": [
+      "light",
+      "feminine",
+      "clean"
+    ],
+    "matched_tone": [
+      "friendly",
+      "native"
+    ],
+    "reasons": [
+      "Совпадают темы: fashion, lifestyle, shopping.",
+      "Совпадают визуальные теги: light, feminine, clean.",
+      "Совпадает тон: friendly, native.",
+      "Платформа кандидата: instagram.",
+      "Похожа на fashion/lifestyle сегмент исходной базы."
+    ]
+  },
+  {
+    "id": 10,
+    "source_kind": "demo_dataset",
+    "username": "lera.mood.look",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/lera.mood.look",
+    "score": 21,
+    "matched_topics": [
+      "fashion",
+      "lifestyle"
+    ],
+    "matched_visual_tags": [
+      "soft",
+      "feminine",
+      "clean"
+    ],
+    "matched_tone": [
+      "warm",
+      "friendly"
+    ],
+    "reasons": [
+      "Совпадают темы: fashion, lifestyle.",
+      "Совпадают визуальные теги: soft, feminine, clean.",
+      "Совпадает тон: warm, friendly.",
+      "Платформа кандидата: instagram.",
+      "Совпадает по мягкой эстетике и личному тону."
+    ]
+  }
+]

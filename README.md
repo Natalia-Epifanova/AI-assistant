@@ -1,16 +1,101 @@
-# AI Assistant Test Task
+# СТАРТ
 
-This repository contains a small MVP for the blogger search test task.
+Этот репозиторий содержит материалы по тестовому заданию для позиции `AI-специалист`.
 
-## Project structure
+Ниже собраны все части задания в одном месте: MVP по `Части 1`, текст по `Части 2` и проекты для `Части 3`.
 
-- `data/input/` stores original input files from the employer.
-- `data/demo/` stores a local demo dataset for safe MVP development without paid APIs.
-- `src/` stores the pipeline code.
-- `prompts/` stores prompt templates for analysis and offer generation.
-- `docs/` stores supporting notes and diagrams.
-- `outputs/` stores generated results.
+## Навигация по заданию
 
-## Current status
+### Часть 1. Поиск блогеров для бартера
 
-The project skeleton is prepared. The next step is wiring input loading and data normalization.
+Основные материалы:
+
+1. [Схема автоматизации](docs/automation_scheme.md)
+2. [Допущения и ограничения MVP](docs/assumptions.md)
+3. [Промпт для анализа профиля](prompts/profile_analysis.md)
+4. [Промпт для генерации оффера](prompts/offer_generation.md)
+5. [Итоговый портрет целевого блогера](outputs/ideal_blogger_profile.json)
+6. [Лучшие найденные кандидаты](outputs/top_candidate_matches.json)
+7. [Черновики персональных предложений](outputs/outreach_offers.json)
+
+Дополнительные артефакты:
+
+- [Очищенные исходные блогеры](outputs/source_bloggers_cleaned.json)
+- [Строки, требующие ручной проверки](outputs/source_bloggers_needs_review.json)
+- [Извлечённые признаки по исходной базе](outputs/source_bloggers_features.json)
+- [Сырые результаты YouTube API](outputs/youtube_search_results.json)
+- [Кандидаты, собранные из YouTube](outputs/youtube_candidates.json)
+
+### Часть 2. Как бы я автоматизировала процесс
+
+- [Автоматизация ответов на отзывы](docs/part_2_reviews_automation.md)
+
+### Часть 3. Прошлые проекты
+
+- [Подборка релевантных проектов](docs/part_3_projects.md)
+
+## Что реализовано в Части 1
+
+В текущей версии MVP умеет:
+
+- читать исходную таблицу блогеров из Excel;
+- очищать и нормализовать ссылки и usernames;
+- отдельно сохранять проблемные строки для ручной проверки;
+- собирать базовые признаки по исходной базе;
+- строить упрощённый портрет подходящего блогера;
+- искать кандидатов из двух источников:
+  - локальный демо-датасет;
+  - живой YouTube API;
+- приводить всех кандидатов к единому формату;
+- ранжировать кандидатов по score;
+- генерировать персональные черновики офферов.
+
+## Где лежат исходные материалы
+
+- Исходная таблица блогеров: [bloggers.xlsx](data/input/bloggers.xlsx)
+- Демо-датасет кандидатов: [candidate_bloggers.json](data/demo/candidate_bloggers.json)
+- Промпты: [prompts](prompts)
+- Документация и пояснения: [docs](docs)
+- Код проекта: [src](src)
+
+## Как запустить проект
+
+```powershell
+& '.\.venv\Scripts\python.exe' .\main.py
+```
+
+## Настройка YouTube API
+
+Для живого поиска по YouTube используется `.env` в корне проекта:
+
+```env
+YOUTUBE_API_KEY=your_real_key_here
+```
+
+Пример лежит в [`.env.example`](.env.example).
+
+Если ключ отсутствует, пайплайн всё равно работает, но без живого YouTube-поиска.
+
+## Что является MVP-допущением
+
+Текущая версия сознательно упрощает часть задачи:
+
+- Instagram и Telegram не подключены как живые источники поиска;
+- портрет исходной базы строится по упрощённым признакам;
+- часть новых кандидатов берётся из локального демо-датасета;
+- офферы собираются по шаблонной логике.
+
+Подробности вынесены в [assumptions.md](docs/assumptions.md).
+
+## Текущее состояние по заданию
+
+- `Часть 1` реализована в формате рабочего MVP.
+- `Часть 2` оформлена отдельным текстовым документом.
+- `Часть 3` оформлена отдельным документом с проектами и примерами.
+
+## Сколько времени заняла работа
+
+- `Часть 1` — около 10 часов.
+- `Часть 2` — около 1 часа.
+- `Часть 3` — около 30 минут.
+- `Итого` — около 12 часов.
